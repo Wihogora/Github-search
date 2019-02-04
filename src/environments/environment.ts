@@ -6,7 +6,8 @@ import { Key } from 'protractor';
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apikey:"dd5c828f9ee7020c185fc830bedf2c5f42dc1614",
 };
 
 /*
