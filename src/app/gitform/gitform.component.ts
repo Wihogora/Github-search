@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitformComponent implements OnInit {
 
+  // submitSearch(name) {
+  //   this.profileService.getProfileInfo(name.target.value);
+  //   this.repoService.getRepoInfo(name.target.value);
+  // }
+
+
+
+
+
   constructor() { }
 
   ngOnInit() {
