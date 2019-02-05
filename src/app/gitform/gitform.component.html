@@ -5,18 +5,19 @@
     
     <form (ngSubmit)="Check()">
         
-        Name:
+        Username:
         <div class="col-md-2">
-            <input type="text" class="form-control" placeholder="Enter username"[(ngModel)]="username.username"><br>
+            <input type="text" [(ngModel)]="username.username"><br>
         </div>
-        <input type="submit" value="Submit">
+        <button type="submit">Search</button>
     </form>
     
     
     <div id="names">
         Name:<br>
-        Repositories:<br>
-        Followers:
+        public_repos:<br>
+        created_at:<br>
+        followers:
         
     </div>  
 </div>   

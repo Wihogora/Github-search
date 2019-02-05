@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import {HttpClient} from '@angular/common/http'
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Repository } from '../repository';
 
 
@@ -24,7 +24,8 @@ export class GitformComponent implements OnInit {
       created_at:Date;
       followers:string;
     }
-    this.http.get<ApiResponse>("https://api.github.com/users/"+this.username+"?access_token=" +environment.api_key)
+    this.http.get<ApiResponse>("https://api.github.com/users/"+
+    this.username+"?access_token=" +environment.api_key)
     .subscribe((data:any)=>{
       
       // console.log(data);
