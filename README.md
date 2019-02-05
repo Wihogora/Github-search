@@ -16,7 +16,7 @@ HTML
 CSS
 TYPESCRIPT
 
-Support and contact details
+## Support and contact details
 If u have any question u can contact me on:
 
 Tel:+250788716357

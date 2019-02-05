@@ -5,11 +5,13 @@ import { HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitformComponent } from './gitform/gitform.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitformComponent,
+    DateCountPipe,
     
   ],
   imports: [
