@@ -1,5 +1,6 @@
 <div class="container">
     <div class="jumbotron">
+        <img src="https://www.omgubuntu.co.uk/wp-content/uploads/2018/06/github-logo.jpeg">
         <h1>GitHub Search</h1>
     </div>
     
@@ -7,17 +8,21 @@
         
         Username:
         <div class="col-md-2">
-            <input type="text" [(ngModel)]="username.username"><br>
+            <input type="text" [(ngModel)]="username.username" id="username" name="name"><br>
         </div>
-        <button type="submit">Search</button>
+        <button type="submit"id="submit1">Search</button>
+
     </form>
     
+</div>   
     
     <div id="names">
-        Name:<br>
-        public_repos:<br>
-        created_at:<br>
-        followers:
+        <h1>Output</h1>
+        Name:{{repos.name}}<br>
+        public_repos:{{repos.public_repos}}<br>
+        created_at:{{repos.created_at}}<br>
+        followers:{{repos.followers}}<br>
+        html_url:{{repos.html_url}}
         
     </div>  
-</div>   
+    <a href="{{repos.html_url}}" class="btn btn-danger" id="show">Go to the page</a>

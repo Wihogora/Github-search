@@ -13,9 +13,9 @@ import { Repository } from '../repository';
 export class GitformComponent implements OnInit {
 
   username= new User("");
-  repos=new Repository("",0,new Date(),"");
+  repos=new Repository("",0,new Date(),"","");
   constructor(private http:HttpClient) { 
-    this.repos=new Repository("",0,new Date(),"");
+    this.repos=new Repository("",0,new Date(),"","");
     }
   Check(){
     interface ApiResponse{
@@ -23,17 +23,20 @@ export class GitformComponent implements OnInit {
       public_repos:number;
       created_at:Date;
       followers:string;
+      html_url:string
     }
     this.http.get<ApiResponse>("https://api.github.com/users/"+
-    this.username+"?access_token=" +environment.api_key)
+    this.username.username+"?access_token=" +environment.api_key)
     .subscribe((data:any)=>{
       
-      // console.log(data);
+      console.log(data);
       this.repos.name= data.name;
       this.repos.public_repos=data.public_repos;
       this.repos.created_at=data.created_at;
       this.repos.followers=data.followers;
+      this.repos.html_url=data.html_url;
     });
+    console.log(this.repos);
   }
   // console.log(this.username)
 

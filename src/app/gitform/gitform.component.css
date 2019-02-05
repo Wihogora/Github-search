@@ -3,6 +3,21 @@
   text-align: center;
   background-color: bisque; 
 }
+.jumbotron img{
+  width: 300px;
+  height: 200px;
+}
 .container{
     background-color: gray;
+}
+#names{
+  margin-top: 50px;
+  margin-left:20px;
+  border-style: double;
+}
+#submit1{
+  margin-top: 20px;
+  margin-left:80px;
+  color: brown;
+  background-color: azure;
 }
