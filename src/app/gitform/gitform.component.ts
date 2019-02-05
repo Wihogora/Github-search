@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import {HttpClient} from '@angular/common/http'
+import { environment } from 'src/environments/environment.prod';
+import { Repository } from '../repository';
+
 
 @Component({
   selector: 'app-gitform',
@@ -7,16 +12,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitformComponent implements OnInit {
 
-  // submitSearch(name) {
-  //   this.profileService.getProfileInfo(name.target.value);
-  //   this.repoService.getRepoInfo(name.target.value);
-  // }
+  username= new User("");
+  repos=new Repository("",0,new Date(),"");
+  constructor(private http:HttpClient) { 
+    this.repos=new Repository("",0,new Date(),"");
+    }
+  Check(){
+    interface ApiResponse{
+      name:string;
+      public_repos:number;
+      created_at:Date;
+      followers:string;
+    }
+    this.http.get<ApiResponse>("https://api.github.com/users/"+this.username+"?access_token=" +environment.api_key)
+    .subscribe((data:any)=>{
+      
+      // console.log(data);
+      this.repos.name= data.name;
+      this.repos.public_repos=data.public_repos;
+      this.repos.created_at=data.created_at;
+      this.repos.followers=data.followers;
+    });
+  }
+  // console.log(this.username)
 
-
-
-
-
-  constructor() { }
 
   ngOnInit() {
   }

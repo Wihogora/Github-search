@@ -3,10 +3,11 @@
         <h1>GitHub Search</h1>
     </div>
     
-    <form>
+    <form (ngSubmit)="Check()">
+        
         Name:
         <div class="col-md-2">
-            <input type="text" class="form-control" placeholder="Enter username"><br>
+            <input type="text" class="form-control" placeholder="Enter username"[(ngModel)]="username.username"><br>
         </div>
         <input type="submit" value="Submit">
     </form>
