@@ -26,7 +26,7 @@ export class GitformComponent implements OnInit {
       html_url:string
     }
     this.http.get<ApiResponse>("https://api.github.com/users/"+
-    this.username.username+"?access_token=" +environment.api_key)
+    this.username.username+"?access_token=cc2a8e007c02b44eef2871c2baa5af672ca47d33")
     .subscribe((data:any)=>{
       
       console.log(data);
