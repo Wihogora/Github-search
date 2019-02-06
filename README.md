@@ -11,10 +11,10 @@ https://github.com/Wihogora/Github-search
 ## BDD
 This program is about a user to enter the github username of someone and the his details will be displayed from his account and give the link.
 ## Technologies used
-ANGULAR
-HTML
-CSS
-TYPESCRIPT
+* ANGULAR
+* HTML
+* CSS
+* BOOTSTRAP
 
 ## Support and contact details
 If u have any question u can contact me on:
