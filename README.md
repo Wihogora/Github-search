@@ -1,4 +1,5 @@
 # GitHub Search, 30th January 2019
+
 ## Author
 Wihogora Wivine
 
@@ -14,7 +15,7 @@ This is a Github search program
 https://github.com/Wihogora/Github-search
 
 ## BDD
-This program is about a user to enter the github username of someone and the his details will be displayed from his account and give the link.
+This program is about a user to enter the github username of someone and account details will be displayed from his account and give the link.
 
 ## Technologies used
 * ANGULAR
@@ -25,8 +26,8 @@ This program is about a user to enter the github username of someone and the his
 ## Support and contact details
 If u have any question u can contact me on:
 
-Tel:+250788716357
-Email:wwihogora@gmail.com
+* Tel:+250788716357
+* Email:wwihogora@gmail.com
 
 ## Further help
 
